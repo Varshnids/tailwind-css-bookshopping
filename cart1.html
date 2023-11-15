@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
+    <title>Buy Now - Book Title</title>
+</head>
+<body class="bg-gray-100">
+     <!-- Header -->
+     <header class="shadow bg-gray-400 m-8 border border-slate-500">
+        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">  
+            <img class="h-30 w-20" src="sparkz.gif" alt="Book Title">
+            <br>
+            <h3 class="text-LG font-extrabold text-green-700 font-mono">S P A R K Z</h3>
+            <div>
+                <nav class="space-x-8 font-semibold text-center text-lg text-black">
+                    <a href="index1.html">Home</a>
+                    <a href="#">Browse</a>
+                    <a href="#">About</a>
+                    <a href="#">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>        
+
+    <div class="container mx-auto p-4 mt-8">
+        <div class="max-w-md mx-auto bg-white p-8 rounded-lg shadow-md">
+            <h2 class="text-2xl font-semibold">STARFISH SISTERS</h2>
+            <p class="text-gray-600">BARBARA</p>
+            <p class="text-gray-800 font-semibold mt-2">₹ 200</p>
+
+            <div class="mt-4">
+                <!-- Book Image -->
+                <img src="n8.jpg" alt="Book Cover" class="w-full h-64 object-cover rounded-lg">
+
+                  <!-- "Buy Now" Button with JavaScript Function -->
+                  <button class="bg-blue-500 text-white px-4 py-2 mt-4 w-full rounded" onclick="addToCart()">Add to Cart</button>
+                   <!-- buy now-->
+                     <div>
+            <a href="cart2.html"><button class="bg-blue-500 text-white px-4 py-2 mt-4 w-full rounded">Buy Now</button></a>
+                     </div>
+    
+                </div>
+            </div>
+        </div>
+    
+        <div class="container mx-auto mt-8">
+            <h2 class="text-2xl font-semibold">Shopping Cart</h2>
+            <ul id="cart" class="bg-white p-4 rounded-lg shadow-md">
+                <!-- Shopping cart contents will be displayed here -->
+            </ul>
+        </div>
+    
+        
+        <script>
+            // JavaScript to manage the shopping cart
+            function addToCart() {
+                const cart = document.getElementById('cart');
+                const bookTitle = "Book Title";
+                const bookPrice = 19.99;
+    
+                const cartItem = document.createElement('li');
+                cartItem.className = 'flex justify-between p-2';
+                cartItem.innerHTML = `
+                    <span>${bookTitle}</span>
+                    <span>$${bookPrice.toFixed(2)}</span>
+                `;
+    
+                cart.appendChild(cartItem);
+            }
+        </script>
+       
+                
+              
+            </div>
+        </div>
+    </div>
+
+   
+</body>
+</html>
